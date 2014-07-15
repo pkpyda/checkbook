@@ -10,7 +10,7 @@
         avatar
       </div>
       <div class = "span7">
-        <strong><%=  status.user_id %></strong> <br />
+        <strong><%=  status.user.full_name %></strong> <br />
         <p><%= status.content %></p>
         <div class="meta">
           <%= link_to time_ago_in_words(status.created_at) + " ago", status_path(status) %>
