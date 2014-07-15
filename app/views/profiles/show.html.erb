@@ -1,0 +1,12 @@
+<div class="page-header">
+	<h2><%= @user.full_name %></h2>
+</div>
+<% if @status %>
+<% @status.each do |status| %>
+	<div class = "well">
+		<p><%= status.content %></p>
+		<hr>
+		<em><%= time_ago_in_words(status.created_at)+ " ago" %></em>
+	</div>
+<% end%>
+<% end %>

@@ -19,5 +19,10 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
   	assert_response :redirect
   	assert_redirected_to :root
   end
+
+  test "profile name given redirects to show page in profile controller" do
+    get "/praveenkumar"
+    assert_response :success
+  end
   
 end
